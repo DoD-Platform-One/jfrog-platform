@@ -52,7 +52,7 @@ xray:
     ## Note that by default we use appVersion to get image tag/version
     image:
       registry: registry1.dso.mil
-      repository: ironbank/jfrog/xray-analysis  # bug in the project, add /frog-xray/ later when changes approved by IB
+      repository: ironbank/jfrog/jfrog-xray/xray-analysis
   indexer:
     name: xray-indexer
     ## Note that by default we use appVersion to get image tag/version

@@ -1,2 +1,0 @@
-Jfrog Pipelines is now accessible in the pipelines side-tab via the artifactory URL:
-  {{ .Values.pipelines.jfrogUrlUI }}

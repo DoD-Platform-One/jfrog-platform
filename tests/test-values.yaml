@@ -4,10 +4,13 @@ gaUpgradeReady: true
 
 # Helm chart version: 
 global:
+  imageRegistry: ""
   imagePullSecrets:
-    - regcred
+    - private-registry
 
 distribution:
+  enabled: false
+insight:
   enabled: false
 pipelines:
   enabled: false
@@ -23,23 +26,28 @@ artifactory:
     image:
       registry: registry1.dso.mil
       repository: ironbank/jfrog/artifactory/artifactory
-  installerInfo: '{"productId":"ironbank_helm_artifactory-pro/10.11.3","features":[{"featureId":"Partner/ACC-013116"}]}'
+  installerInfo: '{"productId":"ironbank_helm_artifactory-pro/10.11.4","features":[{"featureId":"Partner/ACC-013116"}]}'
   nginx:
     image:
       registry: releases-docker.jfrog.io
       repository: jfrog/nginx-artifactory-pro
 
 rabbitmq:
+  enabled: false
   image:
     registry: registry1.dso.mil
     repository: ironbank/jfrog/jfrog-xray/xray-rabbitmq
+  #   debug: true
+  # extraEnvVars:
+  #   - name: RABBITMQ_ULIMITS_NOFILES
+  #     value:
 
 # Use external Postgres installed to the same cluster
 postgresql:
   enabled: true
 
 xray:
-  enabled: true
+  enabled: false
   analysis:
     name: xray-analysis
     ## Note that by default we use appVersion to get image tag/version

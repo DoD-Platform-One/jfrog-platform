@@ -1,4 +1,4 @@
-# JFrog Platform Helm Chart
+# JFrog Platform Helm Chart.
 
 **NOTE:** This is the **GA** release of the JFrog Platform chart (Backward compatibility with versions < 10.0.0 is not supported)
 

@@ -10,21 +10,21 @@ dependencies:
   version: 12.10.1
 - name: artifactory
   repository: https://charts.jfrog.io/
-  version: 107.55.9
+  version: 107.63.9
 - name: xray
   repository: https://charts.jfrog.io/
-  version: 103.69.3
+  version: 103.78.11
 - name: distribution
   repository: https://charts.jfrog.io/
-  version: 102.17.0
+  version: 102.19.1
 - name: insight
   repository: https://charts.jfrog.io/
-  version: 101.13.4
+  version: 101.14.0
 - name: pdn-server
   repository: https://charts.jfrog.io/
   version: 101.2.0
 - name: pipelines
   repository: https://charts.jfrog.io/
-  version: 101.35.3
-digest: sha256:fd62901a84a5df67e1ac623369c97c2f64b3438641a379ceb7f13f2092a17117
-generated: "2023-03-27T20:56:54.571261+05:30"
+  version: 101.42.0
+digest: sha256:17814b15571bd9eee2c98fd274919d242939e319f6a1f147d75991efa0d1bb60
+generated: "2023-08-02T18:46:25.9004+05:30"

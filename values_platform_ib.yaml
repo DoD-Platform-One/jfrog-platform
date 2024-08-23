@@ -1,22 +1,23 @@
 # Leave this file empty to ensure that CI runs builds against the default configuration in values.yaml.
 # If this is an upgrade over an existing platform chart, explicitly pass 'gaUpgradeReady=true' to upgrade
 gaUpgradeReady: true
+databaseUpgradeReady: true
 
 # Helm chart version: 
 global:
   imageRegistry: ""
+  database:
+   initContainerSetupDBImage: releases-docker.jfrog.io/postgres:15.6-alpine
   imagePullSecrets:
     - private-registry
+  versions:
+    router: 7.124.0
 
 distribution:
   enabled: false
 insight:
   enabled: false
 pipelines:
-  enabled: false
-redis:
-  enabled: false
-pdnServer:
   enabled: false
 
 artifactory: 
@@ -26,28 +27,31 @@ artifactory:
     image:
       registry: registry1.dso.mil
       repository: ironbank/jfrog/artifactory/artifactory
-  installerInfo: '{"productId":"ironbank_helm_artifactory-pro/10.14.4","features":[{"featureId":"Partner/ACC-013116"}]}'
+  installerInfo: '{"productId":"ironbank_helm_artifactory-pro/10.19.3","features":[{"featureId":"Partner/ACC-013116"}]}'
   nginx:
     image:
       registry: releases-docker.jfrog.io
       repository: jfrog/nginx-artifactory-pro
 
 rabbitmq:
-  enabled: false
+  enabled: true
   image:
     registry: registry1.dso.mil
-    repository: ironbank/jfrog/jfrog-xray/xray-rabbitmq
-  #   debug: true
-  # extraEnvVars:
-  #   - name: RABBITMQ_ULIMITS_NOFILES
-  #     value:
+    repository: ironbank/bitnami/rabbitmq
+    tag: 3.12.13
+  migration:
+    ## Migration is required to be performed only once hence this option can be disabled once the feature flags are enabled in rabbitmq.
+    enabled: true
+    image:
+      registry: releases-docker.jfrog.io
+  ulimitNofiles: ""
 
 # Use external Postgres installed to the same cluster
 postgresql:
   enabled: true
 
 xray:
-  enabled: false
+  enabled: true
   analysis:
     name: xray-analysis
     ## Note that by default we use appVersion to get image tag/version
@@ -71,9 +75,18 @@ xray:
     image:
       registry: registry1.dso.mil
       repository: ironbank/jfrog/jfrog-xray/router
+  observability:
+    name: observability
+    image:
+      registry: registry1.dso.mil
+      repository: ironbank/jfrog/jfrog-xray/xray-observability
   server:
     name: xray-server
     ## Note that by default we use appVersion to get image tag/version
     image:
       registry: registry1.dso.mil
       repository: ironbank/jfrog/jfrog-xray/xray-server
+
+## This is required to be performed to check if existing products like distribution, insight and pipelines already exists
+preUpgradeHook:
+  enabled: false

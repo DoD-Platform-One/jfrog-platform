@@ -29,7 +29,7 @@ helm repo update
 ### Install Chart
 To install the chart with the release name `jfrog-platform`
 ```bash
-helm upgrade --install jfrog-platform jfrog/jfrog-platform --namespace jfrog-platform --create-namespace 
+helm upgrade --install jfrog-platform jfrog/jfrog-platform --namespace jfrog-platform -f values_platform_ib.yaml --create-namespace 
 ```
 
 ### High Availability
@@ -37,7 +37,7 @@ helm upgrade --install jfrog-platform jfrog/jfrog-platform --namespace jfrog-pla
 For **high availability** of Artifactory, set the replica count to be equal or higher than **2**. Recommended is **3**.
 ```bash
 # Start artifactory with 3 replicas per service
-helm upgrade --install jfrog-platform --set artifactory.artifactory.replicaCount=3 --namespace jfrog-platform --create-namespace
+helm upgrade --install jfrog-platform --set artifactory.artifactory.replicaCount=3 --namespace jfrog-platform -f values_platform_ib.yaml --create-namespace
 ```
 
 ### Install Artifactory license

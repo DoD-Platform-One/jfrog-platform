@@ -1,14 +1,34 @@
 # JFrog Platform Chart Changelog (GA releases only)
 All changes to this chart will be documented in this file.
 
-## [10.20.0] - Nov 4, 2024
+## [10.20.1] - Nov 25, 2024
+* Fix jfrog url with duplicate artifactory string when release name has artifactory
+* Updated kubectl image to version `1.31.2`
+* Update dependency artifactory chart version to 107.98.9
+* Update dependency xray chart version to 103.107.11
+
+## [10.20.0] - Oct 29, 2024
+* **IMPORTANT**
+* Added new dependency chart `worker` which is disabled by default and set `worker.enabled: true` to enable it. More info [here](https://jfrog.com/help/r/jfrog-installation-setup-documentation/installing-jfrog-worker)
+* Commented `global.versions.router` to enable latest router version to picked from corresponding products
 * Update dependency artifactory chart version to 107.98.7
 * Update dependency distribution chart version to 102.27.2
+* Update dependency worker chart version to 101.95.1
+
+## [10.19.7] - Oct 23, 2024
+* Added podSecurityContext and containerSecurityContext for pre-upgrade-check migration hook container. [GH-1929](https://github.com/jfrog/charts/pull/1929)
+* Update dependency artifactory chart version to 107.90.15
 * Update dependency xray chart version to 103.104.18
 
-## [10.19.6] - Oct 9, 2024
+## [10.19.6] - Oct 8, 2024
+* Fixed typo to get fourth parameter for setupPostgres.sh [GH-1992](https://github.com/jfrog/charts/pull/1992)
+* Added `preUpgradeHook.tolerations`
 * Update dependency artifactory chart version to 107.90.14
 * Update dependency xray chart version to 103.104.17
+
+## [10.19.5] - Sep 11, 2024
+* Update dependency artifactory chart version to 107.90.10
+* Update dependency xray chart version to 103.104.8
 
 ## [10.19.4] - Aug 28, 2024
 * Update dependency artifactory chart version to 107.90.9
@@ -51,13 +71,13 @@ All changes to this chart will be documented in this file.
 ## [10.18.0] - May 12, 2024
 * **Important change:**
 * Distribution, Insight and Pipelines are disabled by default, if you are using these products from previous release, enable them using your custom-values.yaml file.
-* Added `preUpgradeHook.enabled` flag defaults to true to check if previous Distribution, Insight and Pipelines releases exists 
+* Added `preUpgradeHook.enabled` flag defaults to true to check if previous Distribution, Insight and Pipelines releases exists
 * Update postgresql tag version to `15.6.0-debian-11-r16`
 * If this is a new deployment or you already use an external database (`postgresql.enabled=false`), these changes **do not affect you**!
 * If this is an upgrade and you are using the default bundles PostgreSQL (`postgresql.enabled=true`), you need to pass previous 9.x/10.x/12.x/13.x's postgresql.image.tag, previous postgresql.persistence.size and databaseUpgradeReady=true
-* Added suppport for `global.imageRegistry` for initContainers 
+* Added suppport for `global.imageRegistry` for initContainers
 * Updated rabbitmq tag version to `3.12.10-debian-11-r1`
-* Added default resources for postgres-setup-init, pre-upgrade-check and rabbitmq's migration pre-upgrade-container container 
+* Added default resources for postgres-setup-init, pre-upgrade-check and rabbitmq's migration pre-upgrade-container container
 * Enabled `unifiedSecretInstallation` to true by default,which enables single unified secret holding all of each product secrets
 * Update dependency artifactory chart version to 107.84.10
 * Update dependency xray chart version to 103.94.6

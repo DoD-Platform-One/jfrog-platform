@@ -1,6 +1,10 @@
 # JFrog Platform Chart Changelog (GA releases only)
 All changes to this chart will be documented in this file.
 
+## [10.20.3] - December 17, 2024
+* Update dependency artifactory chart version
+* Update dependency xray chart version
+
 ## [10.20.1] - Nov 25, 2024
 * Fix jfrog url with duplicate artifactory string when release name has artifactory
 * Updated kubectl image to version `1.31.2`
@@ -71,13 +75,13 @@ All changes to this chart will be documented in this file.
 ## [10.18.0] - May 12, 2024
 * **Important change:**
 * Distribution, Insight and Pipelines are disabled by default, if you are using these products from previous release, enable them using your custom-values.yaml file.
-* Added `preUpgradeHook.enabled` flag defaults to true to check if previous Distribution, Insight and Pipelines releases exists
+* Added `preUpgradeHook.enabled` flag defaults to true to check if previous Distribution, Insight and Pipelines releases exists 
 * Update postgresql tag version to `15.6.0-debian-11-r16`
 * If this is a new deployment or you already use an external database (`postgresql.enabled=false`), these changes **do not affect you**!
 * If this is an upgrade and you are using the default bundles PostgreSQL (`postgresql.enabled=true`), you need to pass previous 9.x/10.x/12.x/13.x's postgresql.image.tag, previous postgresql.persistence.size and databaseUpgradeReady=true
-* Added suppport for `global.imageRegistry` for initContainers
+* Added suppport for `global.imageRegistry` for initContainers 
 * Updated rabbitmq tag version to `3.12.10-debian-11-r1`
-* Added default resources for postgres-setup-init, pre-upgrade-check and rabbitmq's migration pre-upgrade-container container
+* Added default resources for postgres-setup-init, pre-upgrade-check and rabbitmq's migration pre-upgrade-container container 
 * Enabled `unifiedSecretInstallation` to true by default,which enables single unified secret holding all of each product secrets
 * Update dependency artifactory chart version to 107.84.10
 * Update dependency xray chart version to 103.94.6

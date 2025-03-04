@@ -1,27 +1,24 @@
 dependencies:
 - name: postgresql
   repository: https://charts.jfrog.io/
-  version: 10.3.18
+  version: 15.5.20
 - name: rabbitmq
   repository: https://charts.jfrog.io/
-  version: 11.9.3
+  version: 14.6.6
 - name: artifactory
   repository: https://charts.jfrog.io/
-  version: 107.98.11
+  version: 107.104.10
 - name: xray
   repository: https://charts.jfrog.io/
-  version: 103.107.18
+  version: 103.111.15
+- name: catalog
+  repository: https://charts.jfrog.io/
+  version: 101.13.0
 - name: distribution
   repository: https://charts.jfrog.io/
-  version: 102.27.2
-- name: insight
-  repository: https://charts.jfrog.io/
-  version: 101.16.7
-- name: pipelines
-  repository: https://charts.jfrog.io/
-  version: 101.59.7
+  version: 102.28.2
 - name: worker
   repository: https://charts.jfrog.io/
-  version: 101.95.1
-digest: sha256:7ce33bee1176f43a73c6e7b350ef8c7dccf2ade6a8d8658bffe8d16984672e57
-generated: "2024-12-17T06:37:19.577004175Z"
+  version: 101.118.0
+digest: sha256:10a007df54100d61e5600bdcf810a8c52cc5c4af895c3a099bc111e34214de02
+generated: "2025-02-26T00:00:52.526636+05:30"

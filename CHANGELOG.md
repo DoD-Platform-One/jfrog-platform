@@ -1,7 +1,7 @@
 # JFrog Platform Chart Changelog (GA releases only)
 All changes to this chart will be documented in this file.
 
-## [11.0.3] - Feb 26, 2025
+## [11.0.4] - March 12, 2025
 * Fixed sizing files
 
 ## [11.0.2] - Feb 26, 2025
@@ -33,10 +33,6 @@ All changes to this chart will be documented in this file.
 * Update dependency distribution chart version to 102.28.1
 * Update dependency worker chart version to 101.118.0
 * Added rabbitmq tolerations on pre-upgrade-hook [GH-1939](https://github.com/jfrog/charts/pull/1939)
-
-## [10.20.3] - December 17, 2024
-* Update dependency artifactory chart version
-* Update dependency xray chart version
 
 ## [10.20.1] - Nov 25, 2024
 * Fix jfrog url with duplicate artifactory string when release name has artifactory

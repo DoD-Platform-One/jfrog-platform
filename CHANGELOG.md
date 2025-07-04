@@ -1,6 +1,14 @@
 # JFrog Platform Chart Changelog (GA releases only)
 All changes to this chart will be documented in this file.
 
+## [11.1.7] - Jul 2, 2025
+* Update dependency artifactory chart version to 107.111.10
+* Update dependency xray chart version to 103.118.22
+* Update dependency distribution chart version to 102.31.2
+* Update dependency catalog chart version to 101.22.3
+* Updated High Availability section in README.md related to persistence
+* Added extra validation checks for rabbitmq quorum queues
+
 ## [11.1.5] - Jun 12, 2025
 * Update dependency artifactory chart version to 107.111.9
 * Update dependency xray chart version to 103.118.20

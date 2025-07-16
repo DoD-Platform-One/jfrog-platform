@@ -24,7 +24,7 @@ artifactory:
     image:
       registry: registry1.dso.mil
       repository: ironbank/jfrog/artifactory/artifactory
-  installerInfo: '{"productId":"ironbank_helm_artifactory-pro/11.1.7","features":[{"featureId":"Partner/ACC-013116"}]}'
+  installerInfo: '{"productId":"ironbank_helm_artifactory-pro/11.1.9","features":[{"featureId":"Partner/ACC-013116"}]}'
   nginx:
     image:
       registry: releases-docker.jfrog.io

@@ -1,6 +1,15 @@
 # JFrog Platform Chart Changelog (GA releases only)
 All changes to this chart will be documented in this file.
 
+## [11.2.5] - October 23, 2025
+* Update dependency artifactory chart version to 107.117.19
+* Update dependency xray chart version to 103.124.31
+* Update dependency catalog chart version to 101.26.5
+
+## [11.2.4] - October 08, 2025
+* Update dependency artifactory chart version to 107.117.18
+* Update dependency xray chart version to 103.124.28
+
 ## [11.2.3] - September 25, 2025
 * Update dependency artifactory chart version to 107.117.17
 * Update dependency xray chart version to 103.124.26
@@ -10,13 +19,29 @@ All changes to this chart will be documented in this file.
 * Update dependency artifactory chart version to 107.117.15
 * Update dependency distribution chart version to 102.33.2
 * Update dependency catalog chart version to 101.25.1
+
+## [11.2.1] - August 19, 2025
+* Update dependency artifactory chart version to 107.117.14
 * Update dependency xray chart version to 103.124.20
+* Update dependency distribution chart version to 102.33.0
+* Update dependency catalog chart version to 101.24.0
+
+## [11.2.0] - Jul 31, 2025
+* Update dependency artifactory chart version to 107.117.10
+* Update dependency xray chart version to 103.124.11
+* Update dependency catalog chart version to 1.23.0
 * Update dependency worker chart version to 101.153.0
 * **Important changes**
 * Upgrade rabbitmq chart version to 15.4.1
 
-## [11.1.9] - July 15, 2025
-* Update dependency artifactory chart version to 107.111.12
+## [11.1.10] - Jul 18, 2025
+* Update dependency xray version to 3.118.24
+
+## [11.1.9] - Jul 15, 2025
+Update dependency artifactory chart version to 107.111.12
+
+## [11.1.8] - Jul 10, 2025
+* Update dependency artifactory chart version to 107.111.11
 * Update dependency xray chart version to 103.118.23
 * Update dependency distribution chart version to 102.32.0
 * Update dependency catalog chart version to 101.22.4
@@ -29,17 +54,23 @@ All changes to this chart will be documented in this file.
 * Updated High Availability section in README.md related to persistence
 * Added extra validation checks for rabbitmq quorum queues
 
-## [11.1.5] - Jun 12, 2025
+## [11.1.5] - Jun 10, 2025
+* Added support for migrating rabbitmq to high-availability quorum queues setup
+* Added support for rabbitmq high-availability quorum queues clean install setup, please refer [here](README.md/#rabbitmq-quorum-queues-setup)
 * Update dependency artifactory chart version to 107.111.9
 * Update dependency xray chart version to 103.118.20
-* Update dependency distribution chart version to 102.30.1
 * Update dependency catalog chart version to 101.21.1
+
+## [11.1.4] - May 27, 2025
+* Update dependency artifactory chart version to 107.111.8
+* Update dependency xray chart version to 103.118.17
+* Update dependency distribution chart version to 102.30.1
+* Update dependency catalog chart version to 101.19.1
 
 ## [11.1.3] - May 09, 2025
 * Update dependency xray chart version to 103.118.13
 
-## [11.1.2] - May 08, 2025
-* Update dependency artifactory chart version to 107.111.7
+## [11.1.2] - May 5, 2025
 * Fixed an issue with install when xray is disabled
 * Update dependency distribution chart version to 102.30.0
 * Update dependency catalog chart version to 101.18.0

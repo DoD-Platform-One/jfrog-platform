@@ -7,7 +7,7 @@ databaseUpgradeReady: true
 global:
   imageRegistry: ""
   database:
-   initContainerSetupDBImage: releases-docker.jfrog.io/postgres:15.6-alpine
+   initContainerSetupDBImage: releases-docker.jfrog.io/bitnami/postgresql:17.6.0-debian-12-r2
   imagePullSecrets:
     - private-registry
 
@@ -23,7 +23,7 @@ artifactory:
     image:
       registry: registry1.dso.mil
       repository: ironbank/jfrog/artifactory/artifactory
-  installerInfo: '{"productId":"ironbank_helm_artifactory-pro/11.2.5","features":[{"featureId":"Partner/ACC-013116"}]}'
+  installerInfo: '{"productId":"ironbank_helm_artifactory-pro/11.3.0","features":[{"featureId":"Partner/ACC-013116"}]}'
   nginx:
     image:
       registry: releases-docker.jfrog.io

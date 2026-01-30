@@ -16,15 +16,14 @@ distribution:
 workers:
   enabled: false
 
-
-artifactory: 
+artifactory:
   artifactory:
     name: artifactory
     # Note that by default we use appVersion from values.yaml to get image tag/version
     image:
       registry: registry1.dso.mil
       repository: ironbank/jfrog/artifactory/artifactory
-  installerInfo: '{"productId":"ironbank_helm_artifactory-pro/11.3.3","features":[{"featureId":"Partner/ACC-013116"}]}'
+  installerInfo: '{"productId":"ironbank_helm_artifactory-pro/11.4.0","features":[{"featureId":"Partner/ACC-013116"}]}'
   nginx:
     image:
       registry: releases-docker.jfrog.io
